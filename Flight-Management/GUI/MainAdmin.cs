@@ -14,13 +14,17 @@ namespace Flight_Management
 
     public partial class MainAdmin : Form
     {
+        private string username;
+
         public bool isExit = true;
 
         public event EventHandler Logout;
 
-        public MainAdmin()
+        public MainAdmin(string username)
         {
             InitializeComponent();
+
+            this.username = username;
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
