@@ -22,6 +22,7 @@ namespace Flight_Management
 
             //Load list airport
             loadListAirport();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,14 +65,8 @@ namespace Flight_Management
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void searchFlight()
         {
-            this.Close();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            dtgvListFlight.DataSource = null;
             //Get data input
             int? ma_cb = null;
             string ngay_gio = null;
@@ -84,11 +79,11 @@ namespace Flight_Management
             if (cbbLandAirport.Text != "") { ma_sb_den = Int32.Parse(cbbLandAirport.Text.Substring(0, cbbLandAirport.Text.IndexOf(" - "))); }
 
             //
-            if(ma_cb == null && ngay_gio == null && ma_sb_den == null && ma_sb_di == null) { ma_cb = 0; }
+            if (ma_cb == null && ngay_gio == null && ma_sb_den == null && ma_sb_di == null) { ma_cb = 0; }
             List<ChuyenBayInfo> listFlight = chuyenBayBUS.getListFlight(ma_cb, ngay_gio, ma_sb_di, ma_sb_den);
 
             //
-            if(listFlight.Count == 0)
+            if (listFlight.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy chuyến bay nào!", "Thông báo");
                 return;
@@ -97,9 +92,37 @@ namespace Flight_Management
             dtgvListFlight.DataSource = listFlight;
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dtgvListFlight.DataSource = null;
+            searchFlight();
+            setHeaderDatagridView();
+        }
+
         private void btnAll_Click(object sender, EventArgs e)
         {
+            dtgvListFlight.DataSource = null;
             loadListFlight();
+            setHeaderDatagridView();
+        }
+
+        private void setHeaderDatagridView()
+        {
+            if (dtgvListFlight.RowCount > 0)
+            {
+                dtgvListFlight.Columns[0].HeaderText = "MCB";
+                dtgvListFlight.Columns[1].HeaderText = "Sân Bay Đi";
+                dtgvListFlight.Columns[2].HeaderText = "Sân Bay Đến";
+                dtgvListFlight.Columns[3].HeaderText = "Ngày Bay";
+                dtgvListFlight.Columns[4].HeaderText = "Số Phút Bay";
+                dtgvListFlight.Columns[5].HeaderText = "Số Ghế Hạng 1";
+                dtgvListFlight.Columns[6].HeaderText = "Số Ghế Hạng 2";
+            }
         }
     }
 }

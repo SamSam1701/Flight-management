@@ -14,7 +14,10 @@ namespace Flight_Management.BUS
         public int validateInput(ChuyenBay chuyenbay)
         {
             //validate input here
-
+            if(chuyenbay.ma_sb_di == 0 || chuyenbay.ma_sb_den == 0)
+            {
+                return 1;
+            }
             //pass
             return 0;
         }

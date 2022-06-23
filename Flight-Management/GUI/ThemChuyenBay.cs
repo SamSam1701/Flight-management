@@ -51,14 +51,27 @@ namespace Flight_Management.GUI
             chuyenbay.thoi_gian_bay = Convert.ToInt32(nudDuration.Value);
             chuyenbay.so_ghe_hang_1 = Convert.ToInt32(nudVipSeat.Value);
             chuyenbay.so_ghe_hang_2 = Convert.ToInt32(nudNormalSeat.Value);
-            chuyenbay.ma_sb_di = Int32.Parse(cbbTakeOffAirport.Text.Substring(0, cbbTakeOffAirport.Text.IndexOf(" - ")));
-            chuyenbay.ma_sb_den = Int32.Parse(cbbLandAirport.Text.Substring(0, cbbTakeOffAirport.Text.IndexOf(" - ")));
+            chuyenbay.ma_sb_di = 0;
+            if (cbbTakeOffAirport.Text != "")
+            {
+                chuyenbay.ma_sb_di = Int32.Parse(cbbTakeOffAirport.Text.Substring(0, cbbTakeOffAirport.Text.IndexOf(" - ")));
+            }
+            chuyenbay.ma_sb_den = 0;
+            if (cbbLandAirport.Text != "")
+            {
+                chuyenbay.ma_sb_den = Int32.Parse(cbbLandAirport.Text.Substring(0, cbbTakeOffAirport.Text.IndexOf(" - ")));
+            }
 
             //validate input
             int resultValidate = chuyenBayBUS.validateInput(chuyenbay);
 
             //show error input here
-
+            if (resultValidate == 1)
+            {
+                MessageBox.Show("Không được để trống dữ liệu!", "Thông báo");
+                return;
+            }
+   
             //pass
             bool resultAddFlight = chuyenBayBUS.addFlight(chuyenbay);
 
