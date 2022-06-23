@@ -28,80 +28,203 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvListFlight = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbDayOfTakeOff = new System.Windows.Forms.CheckBox();
+            this.btnAll = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cbbLandAirport = new System.Windows.Forms.ComboBox();
+            this.cbbTakeOffAirport = new System.Windows.Forms.ComboBox();
+            this.dtpDayOfTakeOff = new System.Windows.Forms.DateTimePicker();
+            this.lbLandAirport = new System.Windows.Forms.Label();
+            this.lbTakeOffAirport = new System.Windows.Forms.Label();
+            this.txbId = new System.Windows.Forms.TextBox();
+            this.lbId = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListFlight)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lbTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TRA CỨU CHUYẾN BAY";
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(181, 22);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(304, 35);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "TRA CỨU CHUYẾN BAY";
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(462, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 39);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.Controls.Add(this.dtgvListFlight);
+            this.panel1.Location = new System.Drawing.Point(4, 148);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(645, 235);
+            this.panel1.TabIndex = 1;
             // 
-            // comboBox1
+            // dtgvListFlight
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(187, 89);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(258, 24);
-            this.comboBox1.TabIndex = 2;
+            this.dtgvListFlight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListFlight.Location = new System.Drawing.Point(12, 3);
+            this.dtgvListFlight.Name = "dtgvListFlight";
+            this.dtgvListFlight.RowHeadersWidth = 51;
+            this.dtgvListFlight.RowTemplate.Height = 24;
+            this.dtgvListFlight.Size = new System.Drawing.Size(629, 223);
+            this.dtgvListFlight.TabIndex = 0;
             // 
-            // dataGridView1
+            // panel2
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 135);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(667, 257);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.panel2.Controls.Add(this.cbDayOfTakeOff);
+            this.panel2.Controls.Add(this.btnAll);
+            this.panel2.Controls.Add(this.btnSearch);
+            this.panel2.Controls.Add(this.cbbLandAirport);
+            this.panel2.Controls.Add(this.cbbTakeOffAirport);
+            this.panel2.Controls.Add(this.dtpDayOfTakeOff);
+            this.panel2.Controls.Add(this.lbLandAirport);
+            this.panel2.Controls.Add(this.lbTakeOffAirport);
+            this.panel2.Controls.Add(this.txbId);
+            this.panel2.Controls.Add(this.lbId);
+            this.panel2.Location = new System.Drawing.Point(4, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(645, 82);
+            this.panel2.TabIndex = 2;
             // 
-            // label2
+            // cbDayOfTakeOff
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Mã chuyến bay:";
+            this.cbDayOfTakeOff.AutoSize = true;
+            this.cbDayOfTakeOff.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDayOfTakeOff.Location = new System.Drawing.Point(3, 45);
+            this.cbDayOfTakeOff.Name = "cbDayOfTakeOff";
+            this.cbDayOfTakeOff.Size = new System.Drawing.Size(88, 28);
+            this.cbDayOfTakeOff.TabIndex = 10;
+            this.cbDayOfTakeOff.Text = "Ngày đi";
+            this.cbDayOfTakeOff.UseVisualStyleBackColor = true;
+            // 
+            // btnAll
+            // 
+            this.btnAll.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.Location = new System.Drawing.Point(540, 9);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(101, 32);
+            this.btnAll.TabIndex = 9;
+            this.btnAll.Text = "Tất Cả";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(540, 47);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(101, 32);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cbbLandAirport
+            // 
+            this.cbbLandAirport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLandAirport.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLandAirport.FormattingEnabled = true;
+            this.cbbLandAirport.Location = new System.Drawing.Point(350, 45);
+            this.cbbLandAirport.Name = "cbbLandAirport";
+            this.cbbLandAirport.Size = new System.Drawing.Size(184, 32);
+            this.cbbLandAirport.TabIndex = 7;
+            // 
+            // cbbTakeOffAirport
+            // 
+            this.cbbTakeOffAirport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTakeOffAirport.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTakeOffAirport.FormattingEnabled = true;
+            this.cbbTakeOffAirport.Location = new System.Drawing.Point(350, 7);
+            this.cbbTakeOffAirport.Name = "cbbTakeOffAirport";
+            this.cbbTakeOffAirport.Size = new System.Drawing.Size(184, 32);
+            this.cbbTakeOffAirport.TabIndex = 6;
+            // 
+            // dtpDayOfTakeOff
+            // 
+            this.dtpDayOfTakeOff.CalendarFont = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDayOfTakeOff.CustomFormat = "dd/MM/yyyy";
+            this.dtpDayOfTakeOff.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDayOfTakeOff.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDayOfTakeOff.Location = new System.Drawing.Point(105, 45);
+            this.dtpDayOfTakeOff.Name = "dtpDayOfTakeOff";
+            this.dtpDayOfTakeOff.Size = new System.Drawing.Size(118, 30);
+            this.dtpDayOfTakeOff.TabIndex = 4;
+            // 
+            // lbLandAirport
+            // 
+            this.lbLandAirport.AutoSize = true;
+            this.lbLandAirport.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLandAirport.Location = new System.Drawing.Point(229, 51);
+            this.lbLandAirport.Name = "lbLandAirport";
+            this.lbLandAirport.Size = new System.Drawing.Size(107, 24);
+            this.lbLandAirport.TabIndex = 3;
+            this.lbLandAirport.Text = "Sân bay đến:";
+            // 
+            // lbTakeOffAirport
+            // 
+            this.lbTakeOffAirport.AutoSize = true;
+            this.lbTakeOffAirport.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTakeOffAirport.Location = new System.Drawing.Point(229, 13);
+            this.lbTakeOffAirport.Name = "lbTakeOffAirport";
+            this.lbTakeOffAirport.Size = new System.Drawing.Size(93, 24);
+            this.lbTakeOffAirport.TabIndex = 2;
+            this.lbTakeOffAirport.Text = "Sân bay đi:";
+            // 
+            // txbId
+            // 
+            this.txbId.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbId.Location = new System.Drawing.Point(105, 10);
+            this.txbId.Name = "txbId";
+            this.txbId.Size = new System.Drawing.Size(118, 30);
+            this.txbId.TabIndex = 1;
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(24, 15);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(39, 24);
+            this.lbId.TabIndex = 0;
+            this.lbId.Text = "Mã:";
+            // 
+            // btnBack
+            // 
+            this.btnBack.AutoSize = true;
+            this.btnBack.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(4, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(85, 34);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Quay Lại";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // TraCuuChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(657, 386);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbTitle);
             this.Name = "TraCuuChuyenBay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TraCuuChuyenBay";
             this.Load += new System.EventHandler(this.TraCuuChuyenBay_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListFlight)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,10 +232,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTitle;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txbId;
+        private System.Windows.Forms.Label lbId;
+        private System.Windows.Forms.ComboBox cbbLandAirport;
+        private System.Windows.Forms.ComboBox cbbTakeOffAirport;
+        private System.Windows.Forms.DateTimePicker dtpDayOfTakeOff;
+        private System.Windows.Forms.Label lbLandAirport;
+        private System.Windows.Forms.Label lbTakeOffAirport;
+        private System.Windows.Forms.DataGridView dtgvListFlight;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.CheckBox cbDayOfTakeOff;
     }
 }

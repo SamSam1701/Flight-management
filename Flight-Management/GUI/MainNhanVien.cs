@@ -7,19 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Flight_Management.GUI;
 
 namespace Flight_Management
 {
     public partial class MainNhanVien : Form
     {
+        private string username;
 
         public bool isExit = true;
 
         public event EventHandler Logout; 
 
-        public MainNhanVien()
+        public MainNhanVien(string username)
         {
             InitializeComponent();
+
+            this.username = username;
         }
 
         private void MainNhanVien_Load(object sender, EventArgs e)
@@ -45,6 +49,38 @@ namespace Flight_Management
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Logout(this, new EventArgs()); //hảm ủy thác
+        }
+
+        private void btnAddFlight_Click(object sender, EventArgs e)
+        {
+            ThemChuyenBay addFlight = new ThemChuyenBay();
+            this.Hide();
+            addFlight.ShowDialog();
+            this.Show();
+        }
+
+        private void btnSearchFlight_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TraCuuChuyenBay searchFlight = new TraCuuChuyenBay();
+            searchFlight.ShowDialog();
+            this.Show();
+        }
+
+        private void btnUpdateCheckout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CapNhatThanhToan checkout = new CapNhatThanhToan();
+            checkout.ShowDialog();
+            this.Show();
+        }
+
+        private void btnStatisticReport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BaoCaoThongKe baoCaoThongKeGUI = new BaoCaoThongKe();
+            baoCaoThongKeGUI.ShowDialog();
+            this.Show();
         }
     }
 }
