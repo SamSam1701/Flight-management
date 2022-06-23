@@ -76,5 +76,20 @@ namespace Flight_Management.DAO
 
             return password;
         }
+
+        public static void changepass(string newPassword, string username)
+        {
+            //update nhan_vien Set username = '{0}', password = '{1}',hoten = '{2}', email = '{3}' where ma_nv = {4}",
+            string sql = "update khach_hang set password = '"+newPassword+"' where username = '"+username+"'";
+            dbAcess.ExecuteSQL(sql);
+        }
+
+        public static DataTable showinfo(string username)
+        {
+            string sql = "select * from khach_hang where username = '"+username+"'";
+            DataTable db = new DataTable();
+            db = dbAcess.GetData(sql);
+            return db;
+        }
     }
 }

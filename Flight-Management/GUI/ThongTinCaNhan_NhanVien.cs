@@ -12,6 +12,8 @@ namespace Flight_Management
 {
     public partial class ThongTinCaNhan_NhanVien : Form
     {
+
+
         public ThongTinCaNhan_NhanVien()
         {
             InitializeComponent();

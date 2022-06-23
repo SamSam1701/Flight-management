@@ -87,6 +87,7 @@ namespace Flight_Management
             this.btnProfile.TabStop = false;
             this.btnProfile.Text = "Thông Tin Cá Nhân";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHistory
             // 
@@ -136,6 +137,7 @@ namespace Flight_Management
             this.btnUpdatePassword.TabStop = false;
             this.btnUpdatePassword.Text = "Đổi Mật Khẩu";
             this.btnUpdatePassword.UseVisualStyleBackColor = true;
+            this.btnUpdatePassword.Click += new System.EventHandler(this.btnUpdatePassword_Click);
             // 
             // MainKhachHang
             // 

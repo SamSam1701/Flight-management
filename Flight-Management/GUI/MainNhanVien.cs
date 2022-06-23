@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flight_Management.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,17 @@ namespace Flight_Management
 
         public bool isExit = true;
 
-        public event EventHandler Logout; 
+        public event EventHandler Logout;
 
-        public MainNhanVien()
+        private string username;
+
+        private string password;
+
+        public MainNhanVien(string username, string password)
         {
             InitializeComponent();
+            this.username = username;
+            this.password = password;
         }
 
         private void MainNhanVien_Load(object sender, EventArgs e)
@@ -45,6 +52,18 @@ namespace Flight_Management
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Logout(this, new EventArgs()); //hảm ủy thác
+        }
+
+        private void btnUpdatePassword_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMK = new DoiMatKhau(username, password);
+            doiMK.ShowDialog();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan info = new ThongTinCaNhan(username, password);
+            info.ShowDialog();
         }
     }
 }

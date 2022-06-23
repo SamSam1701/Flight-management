@@ -30,5 +30,15 @@ namespace Flight_Management.BUS
         {
             return khachhangDAO.getpass(email);
         }
+
+        public static void changepass(string newPassword, string username)
+        {
+            khachhangDAO.changepass(newPassword, username);
+        }
+
+        public static DataTable showInfo(string username)
+        {
+            return khachhangDAO.showinfo(username);
+        }
     }
 }

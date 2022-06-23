@@ -77,6 +77,7 @@ namespace Flight_Management
             this.btnStaffManager.TabStop = false;
             this.btnStaffManager.Text = "Quản Lí Nhân Viên";
             this.btnStaffManager.UseVisualStyleBackColor = true;
+            this.btnStaffManager.Click += new System.EventHandler(this.btnStaffManager_Click);
             // 
             // btnCustomerManager
             // 
@@ -89,6 +90,7 @@ namespace Flight_Management
             this.btnCustomerManager.TabStop = false;
             this.btnCustomerManager.Text = "Quản Lí Khách Hàng";
             this.btnCustomerManager.UseVisualStyleBackColor = true;
+            this.btnCustomerManager.Click += new System.EventHandler(this.btnCustomerManager_Click);
             // 
             // btnUpdateRule
             // 
@@ -101,6 +103,7 @@ namespace Flight_Management
             this.btnUpdateRule.TabStop = false;
             this.btnUpdateRule.Text = "Thay Đổi Quy Định";
             this.btnUpdateRule.UseVisualStyleBackColor = true;
+            this.btnUpdateRule.Click += new System.EventHandler(this.btnUpdateRule_Click);
             // 
             // btnUpdatePassword
             // 
@@ -113,6 +116,7 @@ namespace Flight_Management
             this.btnUpdatePassword.TabStop = false;
             this.btnUpdatePassword.Text = "Đổi Mật Khẩu";
             this.btnUpdatePassword.UseVisualStyleBackColor = true;
+            this.btnUpdatePassword.Click += new System.EventHandler(this.btnUpdatePassword_Click);
             // 
             // btnProfile
             // 
@@ -125,6 +129,7 @@ namespace Flight_Management
             this.btnProfile.TabStop = false;
             this.btnProfile.Text = "Thông Tin Cá Nhân";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // lbTitile
             // 

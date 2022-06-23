@@ -34,7 +34,6 @@ F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Managemen
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.MainKhachHang.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.MainNhanVien.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.NhanVien_CapNhatThongTin.resources
-F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.GUI.quanlynhanvien.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.Properties.Resources.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.QuyDinh.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.ThongTinCaNhan_KhachHang.resources
@@ -45,3 +44,6 @@ F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Managemen
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Management.csproj.CopyComplete
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Management.exe
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Management.pdb
+F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.GUI.ThongTinCaNhan.resources
+F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.GUI.QuanLyNhanVien.resources
+F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.GUI.QuanLyKhachHang.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flight_Management.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +19,15 @@ namespace Flight_Management
 
         public event EventHandler Logout;
 
-        public MainAdmin()
+        private string username;
+
+        private string password;
+
+        public MainAdmin(string username, string password)
         {
             InitializeComponent();
+            this.username = username;
+            this.password = password;
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
@@ -46,6 +53,36 @@ namespace Flight_Management
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Logout(this, new EventArgs()); //hảm ủy thác
+        }
+
+        private void btnUpdatePassword_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMK = new DoiMatKhau(username, password);
+            doiMK.ShowDialog();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan fAdmin = new ThongTinCaNhan(username, password);
+            fAdmin.ShowDialog();
+        }
+
+        private void btnUpdateRule_Click(object sender, EventArgs e)
+        {
+            QuyDinh qd = new QuyDinh();
+            qd.ShowDialog();
+        }
+
+        private void btnCustomerManager_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHang quanlykh = new QuanLyKhachHang();
+            quanlykh.ShowDialog();
+        }
+
+        private void btnStaffManager_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien quanlynv = new QuanLyNhanVien();
+            quanlynv.ShowDialog();
         }
     }
 }

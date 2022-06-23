@@ -53,7 +53,7 @@ namespace Flight_Management
 
                 if (nhanvienBUS.Login(username, password).Rows.Count > 0)
                 { 
-                    MainNhanVien mainnv = new MainNhanVien();
+                    MainNhanVien mainnv = new MainNhanVien(username, password);
                     mainnv.Show();
                     this.Hide();
                     mainnv.Logout += Mainnv_Logout;
@@ -61,14 +61,14 @@ namespace Flight_Management
                 }
                 else if(AdminBUS.Login(username,password).Rows.Count>0)
                 {
-                    MainAdmin mainAdmin = new MainAdmin();
+                    MainAdmin mainAdmin = new MainAdmin(username, password);
                     mainAdmin.Show();
                     this.Hide();
                     mainAdmin.Logout += MainAdmin_Logout;
                 }
                 else if (KhachHangBUS.Login(username, password).Rows.Count>0)
                 {
-                    MainKhachHang mainKH = new MainKhachHang();
+                    MainKhachHang mainKH = new MainKhachHang(username, password);
                     mainKH.Show();
                     this.Hide();
                     mainKH.Logout += MainKH_Logout;
@@ -77,11 +77,16 @@ namespace Flight_Management
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu chưa chính xác!");
                 }
+
+
+
             }
             else
             {
                 MessageBox.Show("Tài khoản và mật khẩu không được để trống!");
             }
+
+
 
         }
 
