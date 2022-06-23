@@ -52,6 +52,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.Location = new System.Drawing.Point(301, 376);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(100, 35);
@@ -62,6 +63,7 @@
             // 
             // btndelete
             // 
+            this.btndelete.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndelete.Location = new System.Drawing.Point(569, 376);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(83, 35);

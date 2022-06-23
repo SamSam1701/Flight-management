@@ -12,45 +12,69 @@ namespace Flight_Management.DAO
     {
         public static DataTable Login(string username, string password)
         {
+            try
+            {
 
-            string sql = "select * from khach_hang where username='" + username + "' and password = '" + password + "'";
+                string sql = "select * from khach_hang where username='" + username + "' and password = '" + password + "'";
 
-            DataTable accKhachHang = dbAcess.GetData(sql);
+                DataTable accKhachHang = dbAcess.GetData(sql);
 
-            return accKhachHang;
+                return accKhachHang;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public static bool checkExistEmail(string email)
         {
-            string sql = "select * from khach_hang where email = '" + email + "'";
-
-            DataTable dtemail = dbAcess.GetData(sql);
-
-            if (dtemail.Rows.Count > 0)
+            try
             {
-                return true;
+                string sql = "select * from khach_hang where email = '" + email + "'";
+
+                DataTable dtemail = dbAcess.GetData(sql);
+
+                if (dtemail.Rows.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return false;
             }
         }
 
         public static bool register(KhachHang KH)
         {
-            string sql = "select * from khach_hang where username = '" + KH.username + "'";
-
-            DataTable dtusername= dbAcess.GetData(sql);
-
-            if (dtusername.Rows.Count > 0)
+            try
             {
-                return false;
+                string sql = "select * from khach_hang where username = '" + KH.username + "'";
+
+                DataTable dtusername = dbAcess.GetData(sql);
+
+                if (dtusername.Rows.Count > 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    string sql_insert = string.Format("insert into khach_hang(ma_kh, cmnd, sdt, username, password, ho_ten, email) values({0},'{1}','{2}','{3}','{4}','{5}','{6}')", KH.ma_kh, KH.cmnd, KH.sdt, KH.username, KH.password, KH.ho_ten, KH.email);
+                    dbAcess.ExecuteSQL(sql_insert);
+                    return true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                string sql_insert = string.Format("insert into khach_hang(ma_kh, cmnd, sdt, username, password, ho_ten, email) values({0},'{1}','{2}','{3}','{4}','{5}','{6}')", KH.ma_kh, KH.cmnd, KH.sdt, KH.username, KH.password, KH.ho_ten, KH.email);
-                dbAcess.ExecuteSQL(sql_insert);
-                return true;
+                Console.WriteLine(ex.ToString());
+                return false;
             }
         }
 
@@ -58,38 +82,59 @@ namespace Flight_Management.DAO
         {
             string password = "";
 
-            string sql = "select password from khach_hang where email = '" + email + "'";
-
-            DataTable dt = dbAcess.GetData(sql);
-
-            if (dt.Rows.Count > 0)
+            try
             {
+                string sql = "select password from khach_hang where email = '" + email + "'";
 
-                DataRow rowpass = dt.Rows[0];
+                DataTable dt = dbAcess.GetData(sql);
 
-                password = Convert.ToString(rowpass["password"]);
+                if (dt.Rows.Count > 0)
+                {
+
+                    DataRow rowpass = dt.Rows[0];
+
+                    password = Convert.ToString(rowpass["password"]);
+                }
+                else
+                {
+                    password = "";
+                }
+                return password;
             }
-            else
+            catch (Exception ex)
             {
-                password ="";
+                Console.WriteLine(ex.ToString());
+                return password;
             }
-
-            return password;
         }
 
         public static void changepass(string newPassword, string username)
         {
-            //update nhan_vien Set username = '{0}', password = '{1}',hoten = '{2}', email = '{3}' where ma_nv = {4}",
-            string sql = "update khach_hang set password = '"+newPassword+"' where username = '"+username+"'";
-            dbAcess.ExecuteSQL(sql);
+            try
+            {
+                string sql = "update khach_hang set password = '" + newPassword + "' where username = '" + username + "'";
+                dbAcess.ExecuteSQL(sql);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public static DataTable showinfo(string username)
         {
-            string sql = "select * from khach_hang where username = '"+username+"'";
-            DataTable db = new DataTable();
-            db = dbAcess.GetData(sql);
-            return db;
+            try
+            {
+                string sql = "select * from khach_hang where username = '" + username + "'";
+                DataTable db = new DataTable();
+                db = dbAcess.GetData(sql);
+                return db;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
     }
 }

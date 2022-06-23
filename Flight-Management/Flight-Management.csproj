@@ -124,12 +124,6 @@
     <Compile Include="GUI\DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhachHang_CapNhatThongTin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhachHang_CapNhatThongTin.Designer.cs">
-      <DependentUpon>KhachHang_CapNhatThongTin.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\KhoiPhucMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,12 +147,6 @@
     </Compile>
     <Compile Include="GUI\MainNhanVien.Designer.cs">
       <DependentUpon>MainNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\NhanVien_CapNhatThongTin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\NhanVien_CapNhatThongTin.Designer.cs">
-      <DependentUpon>NhanVien_CapNhatThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLyKhachHang.cs">
       <SubType>Form</SubType>
@@ -186,24 +174,6 @@
     <Compile Include="GUI\QuyDinh.Designer.cs">
       <DependentUpon>QuyDinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThongTinCaNhan_KhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThongTinCaNhan_KhachHang.Designer.cs">
-      <DependentUpon>ThongTinCaNhan_KhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ThongTinCaNhan_NhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThongTinCaNhan_NhanVien.Designer.cs">
-      <DependentUpon>ThongTinCaNhan_NhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TraCuuChuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\TraCuuChuyenBay.Designer.cs">
-      <DependentUpon>TraCuuChuyenBay.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GUI\DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,9 +186,6 @@
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhachHang_CapNhatThongTin.resx">
-      <DependentUpon>KhachHang_CapNhatThongTin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoiPhucMK.resx">
       <DependentUpon>KhoiPhucMK.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainNhanVien.resx">
       <DependentUpon>MainNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NhanVien_CapNhatThongTin.resx">
-      <DependentUpon>NhanVien_CapNhatThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyKhachHang.resx">
       <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
@@ -254,15 +218,6 @@
     </Compile>
     <EmbeddedResource Include="GUI\QuyDinh.resx">
       <DependentUpon>QuyDinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongTinCaNhan_KhachHang.resx">
-      <DependentUpon>ThongTinCaNhan_KhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongTinCaNhan_NhanVien.resx">
-      <DependentUpon>ThongTinCaNhan_NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TraCuuChuyenBay.resx">
-      <DependentUpon>TraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

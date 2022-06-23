@@ -44,7 +44,7 @@
             // 
             this.btnresetpass.BackColor = System.Drawing.Color.White;
             this.btnresetpass.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnresetpass.Location = new System.Drawing.Point(305, 306);
+            this.btnresetpass.Location = new System.Drawing.Point(256, 302);
             this.btnresetpass.Name = "btnresetpass";
             this.btnresetpass.Size = new System.Drawing.Size(117, 38);
             this.btnresetpass.TabIndex = 19;
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(657, 386);
+            this.ClientSize = new System.Drawing.Size(587, 395);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbnewpass);
             this.Controls.Add(this.label4);

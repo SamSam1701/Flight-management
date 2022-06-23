@@ -13,109 +13,94 @@ namespace Flight_Management.DAO
 
         public static DataTable Login(string username, string password)
         {
+            try
+            {
 
+                string sql = "select * from nhan_vien where username='" + username + "' and password = '" + password + "'";
 
-            string sql = "select * from nhan_vien where username='" + username + "' and password = '"+password+"'";
+                DataTable accNhanVien = dbAcess.GetData(sql);
 
-            DataTable accNhanVien = dbAcess.GetData(sql);
-
-            return accNhanVien;
+                return accNhanVien;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public static DataTable Getdata()
         {
-            string sql = "select * from nhan_vien";
-            return dbAcess.GetData(sql);
+            try
+            {
+                string sql = "select * from nhan_vien";
+                return dbAcess.GetData(sql);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public static string getpass(string email)
         {
             string password = "";
-
-            string sql = "select password from nhan_vien where email = '" + email + "'";
-
-            DataTable dt = dbAcess.GetData(sql);
-
-            if (dt.Rows.Count > 0)
+            try
             {
 
-                DataRow rowpass = dt.Rows[0];
+                string sql = "select password from nhan_vien where email = '" + email + "'";
 
-                password = Convert.ToString(rowpass["password"]);
+                DataTable dt = dbAcess.GetData(sql);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    DataRow rowpass = dt.Rows[0];
+
+                    password = Convert.ToString(rowpass["password"]);
+                }
+                else
+                {
+                    password = "";
+                }
+
+                return password;
             }
-            else
+            catch (Exception ex)
             {
-                password = "";
+                Console.WriteLine(ex.ToString());
+                return password;
             }
-
-            return password;
         }
 
         public static void changepass(string newPassword, string username)
         {
-            //update nhan_vien Set username = '{0}', password = '{1}',hoten = '{2}', email = '{3}' where ma_nv = {4}",
-            string sql = "update nhan_vien set password = '" + newPassword + "' where username = '" + username + "'";
-            dbAcess.ExecuteSQL(sql);
+            try
+            {
+                string sql = "update nhan_vien set password = '" + newPassword + "' where username = '" + username + "'";
+                dbAcess.ExecuteSQL(sql);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public static DataTable showinfo(string username)
         {
-            string sql = "select * from nhan_vien where username = '" + username + "'";
-            DataTable db = new DataTable();
-            db = dbAcess.GetData(sql);
-            return db;
+            try
+            {
+                string sql = "select * from nhan_vien where username = '" + username + "'";
+                DataTable db = new DataTable();
+                db = dbAcess.GetData(sql);
+                return db;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
-
-        //public static int AddData(nhanvien nv)
-        //{
-        //    try
-        //    {
-        //        string sql = string.Format("insert into nhan_vien(ma_nv, username, password, ho_ten, email) values({0}, '{1}','{2}','{3}','{4}')", nv.ma_nv, nv.username, nv.password, nv.ho_ten, nv.email);
-
-        //        return dbAcess.ExecuteSQL(sql);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //throw ex;
-        //        Console.WriteLine(ex.ToString());
-        //        return 0;
-        //    }
-        //}
-
-        //public static int updateData(nhanvien nv)
-        //{
-
-        //    try
-        //    {
-        //        string sql = string.Format("update nhan_vien Set username = '{0}', password = '{1}',hoten = '{2}', email = '{3}' where ma_nv = {4}", nv.username, nv.password, nv.ho_ten, nv.email, nv.ma_nv);
-
-        //        return dbAcess.ExecuteSQL(sql);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //throw ex;
-        //        Console.WriteLine(ex.ToString());
-        //        return 0;
-        //    }
-        //}
-
-        //public static int delete(int manv)
-        //{
-
-        //    int id = 5;
-
-        //    try
-        //    {
-        //        string sql = string.Format("Delete from nhan_vien where ma_nv = {0}", id);
-
-        //        return dbAcess.ExecuteSQL(sql);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //throw ex;
-        //        Console.WriteLine(ex.ToString());
-        //        return 0;
-        //    }
-        //}
     }
 }
