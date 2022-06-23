@@ -39,6 +39,15 @@ namespace Flight_Management.GUI
             }
 
             dtgvReport.DataSource = list;
+            //Set header
+            if (dtgvReport.RowCount > 0)
+            {
+                dtgvReport.Columns[0].HeaderText = "Tháng";
+                dtgvReport.Columns[1].HeaderText = "Số Chuyến Bay";
+                dtgvReport.Columns[2].HeaderText = "Doanh Thu";
+                dtgvReport.Columns[3].HeaderText = "Tỉ Lệ Vé Bán";
+
+            }
         }
 
         private void BaoCaoThongKe_Load(object sender, EventArgs e)
@@ -65,6 +74,19 @@ namespace Flight_Management.GUI
             }
 
             dtgvReport.DataSource = list;
+
+            //Set header
+            if(dtgvReport.RowCount > 0)
+            {
+                dtgvReport.Columns[0].HeaderText = "MCB";
+                dtgvReport.Columns[1].HeaderText = "Sân Bay Đi";
+                dtgvReport.Columns[2].HeaderText = "Sân Bay Đến";
+                dtgvReport.Columns[3].HeaderText = "Ngày Bay";
+                dtgvReport.Columns[4].HeaderText = "Số Vé Đã Bán";
+                dtgvReport.Columns[5].HeaderText = "Tỉ Lệ";
+                dtgvReport.Columns[6].HeaderText = "Doanh Thu";
+
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -58,17 +58,19 @@ namespace Flight_Management.GUI
         private void btnAllBill_Click(object sender, EventArgs e)
         {
             loadBills(ALL);
-            
+            setHeaderHoaDon();
         }
 
         private void btnPaid_Click(object sender, EventArgs e)
         {
             loadBills(PAID);
+            setHeaderHoaDon();
         }
 
         private void btnUnpaid_Click(object sender, EventArgs e)
         {
             loadBills(UNPAID);
+            setHeaderHoaDon();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,6 +90,7 @@ namespace Flight_Management.GUI
 
             //Show
             dtgvBill.DataSource = detail;
+            setHeaderChiTiet();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -130,6 +133,34 @@ namespace Flight_Management.GUI
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void setHeaderHoaDon()
+        {
+            //Set header
+            if (dtgvBill.RowCount > 0)
+            {
+                dtgvBill.Columns[0].HeaderText = "Mã HĐ";
+                dtgvBill.Columns[1].HeaderText = "Tổng Tiền";
+                dtgvBill.Columns[2].HeaderText = "Thanh Toán";
+                dtgvBill.Columns[3].HeaderText = "Mã KH";
+                dtgvBill.Columns[4].HeaderText = "Họ Tên";
+                dtgvBill.Columns[5].HeaderText = "Username";
+            }
+        }
+
+        private void setHeaderChiTiet()
+        {
+            //Set header
+            if (dtgvBill.RowCount > 0)
+            {
+                dtgvBill.Columns[0].HeaderText = "Mã VCB";
+                dtgvBill.Columns[1].HeaderText = "Hành Khách";
+                dtgvBill.Columns[2].HeaderText = "Loại Hạng";
+                dtgvBill.Columns[3].HeaderText = "Sân Bay Đi";
+                dtgvBill.Columns[4].HeaderText = "Sân Bay Đến";
+                dtgvBill.Columns[5].HeaderText = "Giá Vé";
+            }
         }
     }
 }
