@@ -28,17 +28,12 @@ F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Managemen
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.DangNhap.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.DanhSachChuyenBay.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.DoiMatKhau.resources
-F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.KhachHang_CapNhatThongTin.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.KhoiPhucMK.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.MainAdmin.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.MainKhachHang.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.MainNhanVien.resources
-F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.NhanVien_CapNhatThongTin.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.Properties.Resources.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.QuyDinh.resources
-F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.ThongTinCaNhan_KhachHang.resources
-F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.ThongTinCaNhan_NhanVien.resources
-F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight_Management.TraCuuChuyenBay.resources
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Management.csproj.GenerateResource.cache
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Management.csproj.CoreCompileInputs.cache
 F:\Thietkephanmem\Flight-Management\Flight-Management\obj\Debug\Flight-Management.csproj.CopyComplete
