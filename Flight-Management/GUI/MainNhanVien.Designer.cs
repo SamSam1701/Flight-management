@@ -72,11 +72,12 @@ namespace Flight_Management
             this.btnUpdateCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCheckout.Location = new System.Drawing.Point(57, 217);
             this.btnUpdateCheckout.Name = "btnUpdateCheckout";
-            this.btnUpdateCheckout.Size = new System.Drawing.Size(259, 39);
+            this.btnUpdateCheckout.Size = new System.Drawing.Size(272, 39);
             this.btnUpdateCheckout.TabIndex = 11;
             this.btnUpdateCheckout.TabStop = false;
             this.btnUpdateCheckout.Text = "Cập Nhật Thanh Toán";
             this.btnUpdateCheckout.UseVisualStyleBackColor = true;
+            this.btnUpdateCheckout.Click += new System.EventHandler(this.btnUpdateCheckout_Click);
             // 
             // btnProfile
             // 
@@ -102,6 +103,7 @@ namespace Flight_Management
             this.btnStatisticReport.TabStop = false;
             this.btnStatisticReport.Text = "Thống Kê - Báo Cáo";
             this.btnStatisticReport.UseVisualStyleBackColor = true;
+            this.btnStatisticReport.Click += new System.EventHandler(this.btnStatisticReport_Click);
             // 
             // btnAddFlight
             // 
@@ -109,11 +111,12 @@ namespace Flight_Management
             this.btnAddFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFlight.Location = new System.Drawing.Point(57, 30);
             this.btnAddFlight.Name = "btnAddFlight";
-            this.btnAddFlight.Size = new System.Drawing.Size(259, 39);
+            this.btnAddFlight.Size = new System.Drawing.Size(272, 39);
             this.btnAddFlight.TabIndex = 8;
             this.btnAddFlight.TabStop = false;
             this.btnAddFlight.Text = "Thêm Chuyến Bay";
             this.btnAddFlight.UseVisualStyleBackColor = true;
+            this.btnAddFlight.Click += new System.EventHandler(this.btnAddFlight_Click);
             // 
             // btnSearchFlight
             // 
@@ -121,11 +124,12 @@ namespace Flight_Management
             this.btnSearchFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchFlight.Location = new System.Drawing.Point(57, 119);
             this.btnSearchFlight.Name = "btnSearchFlight";
-            this.btnSearchFlight.Size = new System.Drawing.Size(259, 39);
+            this.btnSearchFlight.Size = new System.Drawing.Size(272, 39);
             this.btnSearchFlight.TabIndex = 7;
             this.btnSearchFlight.TabStop = false;
             this.btnSearchFlight.Text = "Tra Cứu Chuyến Bay";
             this.btnSearchFlight.UseVisualStyleBackColor = true;
+            this.btnSearchFlight.Click += new System.EventHandler(this.btnSearchFlight_Click);
             // 
             // btnLogout
             // 

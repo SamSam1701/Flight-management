@@ -13,11 +13,13 @@ namespace Flight_Management
 {
     public partial class MainKhachHang : Form
     {
+        private string username;
 
         public bool isExit = true;
 
         public event EventHandler Logout;
 
+<<<<<<< HEAD
         private string username;
 
         private string password;
@@ -27,6 +29,13 @@ namespace Flight_Management
             InitializeComponent();
             this.username = username;
             this.password = password;
+=======
+        public MainKhachHang(string username)
+        {
+            InitializeComponent();
+
+            this.username = username;
+>>>>>>> main
         }
 
         private void MainKhachHang_Load(object sender, EventArgs e)

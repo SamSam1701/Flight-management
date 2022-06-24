@@ -90,16 +90,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\AdminBUS.cs" />
+<<<<<<< HEAD
     <Compile Include="BUS\checkLogin.cs" />
+=======
+    <Compile Include="BUS\BaoCaoBUS.cs" />
+    <Compile Include="BUS\ChuyenBayBUS.cs" />
+    <Compile Include="BUS\HoaDonBUS.cs" />
+>>>>>>> main
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\nhanvienBUS.cs" />
+    <Compile Include="BUS\SanBayBUS.cs" />
+    <Compile Include="BUS\VeChuyenBayBUS.cs" />
     <Compile Include="DAO\AdminDAO.cs" />
+    <Compile Include="DAO\BaoCaoDAO.cs" />
+    <Compile Include="DAO\ChuyenBayDAO.cs" />
     <Compile Include="DAO\dbAccess.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\khachhangDAO.cs" />
     <Compile Include="DAO\NhanvienDAO.cs" />
+    <Compile Include="DAO\SanBayDAO.cs" />
+    <Compile Include="DAO\VeChuyenBayDAO.cs" />
     <Compile Include="DTO\admin.cs" />
+    <Compile Include="DTO\BaoCaoTheoThang.cs" />
+    <Compile Include="DTO\BaoCaoTheoChuyen.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="DTO\ChuyenBay.cs" />
+    <Compile Include="DTO\ChuyenBayInfo.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\nhanvien.cs" />
+    <Compile Include="DTO\SanBay.cs" />
+    <Compile Include="DTO\VeChuyenBay.cs" />
+    <Compile Include="GUI\BaoCaoThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe.Designer.cs">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CapNhatThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CapNhatThanhToan.Designer.cs">
+      <DependentUpon>CapNhatThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +199,12 @@
     <Compile Include="GUI\ThongTinCaNhan.Designer.cs">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThemChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThemChuyenBay.Designer.cs">
+      <DependentUpon>ThemChuyenBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\QuyDinh.cs">
@@ -174,6 +213,33 @@
     <Compile Include="GUI\QuyDinh.Designer.cs">
       <DependentUpon>QuyDinh.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="GUI\ThongTinCaNhan_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongTinCaNhan_KhachHang.Designer.cs">
+      <DependentUpon>ThongTinCaNhan_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongTinCaNhan_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongTinCaNhan_NhanVien.Designer.cs">
+      <DependentUpon>ThongTinCaNhan_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TraCuuChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TraCuuChuyenBay.Designer.cs">
+      <DependentUpon>TraCuuChuyenBay.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\BaoCaoThongKe.resx">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CapNhatThanhToan.resx">
+      <DependentUpon>CapNhatThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> main
     <EmbeddedResource Include="GUI\DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThemChuyenBay.resx">
+      <DependentUpon>ThemChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
