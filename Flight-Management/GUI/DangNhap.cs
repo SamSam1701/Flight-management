@@ -52,8 +52,13 @@ namespace Flight_Management
                 string password = tbpasslogin.Text;
 
                 if (nhanvienBUS.Login(username, password).Rows.Count > 0)
+<<<<<<< HEAD
+                { 
+                    MainNhanVien mainnv = new MainNhanVien(username, password);
+=======
                 {
                     MainNhanVien mainnv = new MainNhanVien(username);
+>>>>>>> main
                     mainnv.Show();
                     this.Hide();
                     mainnv.Logout += Mainnv_Logout;
@@ -61,14 +66,22 @@ namespace Flight_Management
                 }
                 else if (AdminBUS.Login(username, password).Rows.Count > 0)
                 {
+<<<<<<< HEAD
+                    MainAdmin mainAdmin = new MainAdmin(username, password);
+=======
                     MainAdmin mainAdmin = new MainAdmin(username);
+>>>>>>> main
                     mainAdmin.Show();
                     this.Hide();
                     mainAdmin.Logout += MainAdmin_Logout;
                 }
                 else if (KhachHangBUS.Login(username, password).Rows.Count > 0)
                 {
+<<<<<<< HEAD
+                    MainKhachHang mainKH = new MainKhachHang(username, password);
+=======
                     MainKhachHang mainKH = new MainKhachHang(username);
+>>>>>>> main
                     mainKH.Show();
                     this.Hide();
                     mainKH.Logout += MainKH_Logout;
@@ -77,11 +90,16 @@ namespace Flight_Management
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu chưa chính xác!");
                 }
+
+
+
             }
             else
             {
                 MessageBox.Show("Tài khoản và mật khẩu không được để trống!");
             }
+
+
 
         }
 

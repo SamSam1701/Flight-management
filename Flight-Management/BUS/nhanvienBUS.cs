@@ -27,6 +27,16 @@ namespace Flight_Management.BUS
             return NhanvienDAO.getpass(email);
         }
 
+        public static void changepass(string newPassword, string username)
+        {
+            NhanvienDAO.changepass(newPassword, username);
+        }
+
+        public static DataTable showInfo(string username)
+        {
+            return NhanvienDAO.showinfo(username);
+        }
+
         //public static int AddData(nhanvien nv)
         //{
         //    return NhanvienDAO.AddData(nv);

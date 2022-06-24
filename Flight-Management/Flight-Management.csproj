@@ -90,9 +90,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\AdminBUS.cs" />
+<<<<<<< HEAD
+    <Compile Include="BUS\checkLogin.cs" />
+=======
     <Compile Include="BUS\BaoCaoBUS.cs" />
     <Compile Include="BUS\ChuyenBayBUS.cs" />
     <Compile Include="BUS\HoaDonBUS.cs" />
+>>>>>>> main
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\nhanvienBUS.cs" />
     <Compile Include="BUS\SanBayBUS.cs" />
@@ -153,12 +157,6 @@
     <Compile Include="GUI\DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhachHang_CapNhatThongTin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhachHang_CapNhatThongTin.Designer.cs">
-      <DependentUpon>KhachHang_CapNhatThongTin.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\KhoiPhucMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,17 +181,23 @@
     <Compile Include="GUI\MainNhanVien.Designer.cs">
       <DependentUpon>MainNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NhanVien_CapNhatThongTin.cs">
+    <Compile Include="GUI\QuanLyKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\NhanVien_CapNhatThongTin.Designer.cs">
-      <DependentUpon>NhanVien_CapNhatThongTin.cs</DependentUpon>
+    <Compile Include="GUI\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\quanlynhanvien.cs">
+    <Compile Include="GUI\QuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\quanlynhanvien.Designer.cs">
-      <DependentUpon>quanlynhanvien.cs</DependentUpon>
+    <Compile Include="GUI\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ThemChuyenBay.cs">
       <SubType>Form</SubType>
@@ -209,6 +213,8 @@
     <Compile Include="GUI\QuyDinh.Designer.cs">
       <DependentUpon>QuyDinh.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="GUI\ThongTinCaNhan_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,7 @@
     <EmbeddedResource Include="GUI\CapNhatThanhToan.resx">
       <DependentUpon>CapNhatThanhToan.cs</DependentUpon>
     </EmbeddedResource>
+>>>>>>> main
     <EmbeddedResource Include="GUI\DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,9 +251,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhachHang_CapNhatThongTin.resx">
-      <DependentUpon>KhachHang_CapNhatThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoiPhucMK.resx">
       <DependentUpon>KhoiPhucMK.cs</DependentUpon>
@@ -260,11 +264,14 @@
     <EmbeddedResource Include="GUI\MainNhanVien.resx">
       <DependentUpon>MainNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NhanVien_CapNhatThongTin.resx">
-      <DependentUpon>NhanVien_CapNhatThongTin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\quanlynhanvien.resx">
-      <DependentUpon>quanlynhanvien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThemChuyenBay.resx">
       <DependentUpon>ThemChuyenBay.cs</DependentUpon>
@@ -280,15 +287,6 @@
     </Compile>
     <EmbeddedResource Include="GUI\QuyDinh.resx">
       <DependentUpon>QuyDinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongTinCaNhan_KhachHang.resx">
-      <DependentUpon>ThongTinCaNhan_KhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongTinCaNhan_NhanVien.resx">
-      <DependentUpon>ThongTinCaNhan_NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TraCuuChuyenBay.resx">
-      <DependentUpon>TraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

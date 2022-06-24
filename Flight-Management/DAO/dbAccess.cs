@@ -70,5 +70,24 @@ namespace Flight_Management.DAO
             return res;
         }
 
+        public static int CheckUserLogin(string username, string password)
+        {
+            if (khachhangDAO.Login(username, password).Rows.Count > 0)
+            {
+                return 1;
+            }
+            else if (AdminDAO.Login(username, password).Rows.Count > 0)
+            {
+                return 0;
+            }
+            else if (NhanvienDAO.Login(username, password).Rows.Count > 0)
+            {
+                return 2;
+            }
+            else
+            {
+                return -1;
+            }
+        }
     }
 }
